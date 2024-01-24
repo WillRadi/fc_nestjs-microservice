@@ -1,9 +1,11 @@
-version: '3.9'
+version: "3.9"
+
 services:
   app:
     build: .
+    container_name: nestjs-microservice
     ports:
       - 3000:3000
     volumes:
       - .:/app
-    command: npm run start:dev
+    command: ./entrypoint.sh
